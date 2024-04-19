@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int A[5]={2,4,6,8,10}; // declared arrays will be on main function memory
+    int A[5]={2,4,6,8,10}; // declared arrays will be on stack memory
     cout<<sizeof(A)<<" bytes"<<endl;
     for (int i=0; i<5; i++) {
         cout<<A[i]<<" ";
