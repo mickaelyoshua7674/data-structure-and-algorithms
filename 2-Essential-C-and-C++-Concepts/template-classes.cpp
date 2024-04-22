@@ -18,7 +18,6 @@ class Arithametic {
         T sub() {
             return a-b;
         }
-
 };
 
 int main() {
