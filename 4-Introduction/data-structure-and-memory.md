@@ -8,6 +8,22 @@ Heap Memory is an unorganized memory, does not have an order for allocation.
 
 ## Types of Data Structures
 ### Physical Data Structures
-
+There are two base physical data structures: Array and Linked List.
+Those are called physical bacause the define how the memory is organized and allocated, is used to actually store the data in memory.
 
 ### Logical Data Structures
+The logical data structures are: Stack, Queues, Trees, Graphs and Hash Tables. Those logical data structures define how to navigate the data, how insert, delete etc.
+* Linear Data structure: Stack and Queues;
+* Non-linear Data Structure: Trees and Graphs;
+* Tabular Data Structure: Hash Table.
+
+## ADT (Abstract DataType)
+DataType is defined by:
+* Representation of Data, how store it;
+* Operation on Data, what operations are alowed in that data.
+
+Abstract DataType is more related to OOP, is hiding details and using then without knowing then. e.g.: Implement a class for Lists, store as array or linked list, define the operations like 'add', 'remove', 'search', then use the class in your program without needing to know how is stored and how is executed the operations (like using the object 'list' in Python).
+
+## Time and Space Complexity
+* Time complexity: time taken to execute certain tasks on data concerning the number of elements and how is there structure;
+* Space Complexity: space in memory necessary to store the data concerning only the number of elements, not the number of bytes.
