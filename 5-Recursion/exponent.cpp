@@ -13,9 +13,8 @@ int expRecursion2(int m, int n) {
     }
     if(n%2==0) {
         return expRecursion2(m*m,n/2);
-    } else {
-        return m*expRecursion2(m*m,(n-1)/2);
     }
+    return m*expRecursion2(m*m,(n-1)/2);
 }
 int expLoop(int m, int n) {
     int e=m;
