@@ -40,4 +40,8 @@ int main() {
     fun1(x);
     printf("\n");
     fun2(x);
+    /*
+    Careful, the memory of all function calls in recursion is stacked in memory
+    and is only released in descending phase.
+    */
 }
