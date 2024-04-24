@@ -6,6 +6,9 @@ void fun1(int n) {
     don't become an infinite calling
 
     Here the function is printing in ascending phase
+
+    If the recursion call is the last execution inside the function then is a Tail Recursion.
+    Can be easily converted into a while loop.
     */
     if (n>0) {
         printf("%d\n",n);
@@ -21,6 +24,9 @@ void fun2(int n) {
     don't become an infinite calling
 
     Here the function is printing in descending phase
+
+    If the recursion call is the first execution inside the function then is a Head Recursion
+    Can't be easily converted into a while loop.
     */
     if (n>0) {
         fun2(n-1);
