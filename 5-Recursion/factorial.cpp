@@ -2,11 +2,10 @@
 using namespace std;
 
 int factorialRecursion(int n) {
-    if(n>1) {
-        return n*factorialRecursion(n-1);
-    } else {
+    if(n==1) {
         return 1;
     }
+    return n*factorialRecursion(n-1);
 }
 int factorialLoop(int n) {
     int f=1;

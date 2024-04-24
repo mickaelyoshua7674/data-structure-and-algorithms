@@ -2,11 +2,10 @@
 using namespace std;
 
 int sumNaturalNumRecursion(int n) {
-    if(n>0) {
-        return sumNaturalNumRecursion(n-1)+n;
-    } else {
+    if(n==0) {
         return 0;
     }
+    return sumNaturalNumRecursion(n-1)+n;
 }
 int sumNaturalNumFormula(int n) {
     return n*(n+1)/2;
