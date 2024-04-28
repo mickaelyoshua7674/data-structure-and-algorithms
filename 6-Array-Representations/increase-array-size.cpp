@@ -2,4 +2,4 @@
 
 int main() {
 
-} EU AMO MINHA NAMORADA
+}
