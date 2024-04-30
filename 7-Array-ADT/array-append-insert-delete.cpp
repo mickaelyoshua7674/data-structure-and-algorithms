@@ -26,17 +26,33 @@ void append(Array *arr, int x) {
     }
 }
 
+/*
+Shift the array to right then insert new element at given index.
+*/
 void insert(Array *arr, int index, int x) {
-    if(index<arr->length && index>=0) {
+    if(index<=arr->length && index>=0) {
         for(int i=arr->length;i>index;i--) {
             arr->A[i]=arr->A[i-1];
         }
         arr->A[index]=x;
         arr->length++;
     }
-    if(index>=arr->length) {
-        append(arr, x);
+}
+
+/*
+Delete the element at given index then shift array to left.
+*/
+int del(Array *arr, int index) {
+    int x;
+    if(index<arr->length && index>=0) {
+        x=arr->A[index];
+        for(int i=index;i<arr->length-1;i++) {
+            arr->A[i]=arr->A[i+1];
+        }
+        arr->length--;
+        return x;
     }
+    return 0;
 }
 
 int main() {
@@ -66,6 +82,11 @@ int main() {
     printf("\n\nEnter the index and the number to insert: ");
     scanf("%d %d", &index, &n);
     insert(&arr, index, n);
+    display(arr);
+
+    printf("\n\nEnter index to be deleted: ");
+    scanf("%d", &index);
+    printf("\n%d on index %d was deleted.", del(&arr, index), index);
     display(arr);
 
     delete[] arr.A;
