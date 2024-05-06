@@ -23,6 +23,9 @@ void swap(int *x, int *y) {
     *y=temp;
 }
 
+/*
+Reverse order of an array using an auxiliar array to copy and reverse.
+*/
 void reverseAuxiliarArray(Array *a) {
     Array b=*a;
     for(int i=a->length-1,j=0; i>=0; i--,j++) {
@@ -33,10 +36,36 @@ void reverseAuxiliarArray(Array *a) {
     }
 }
 
+/*
+Reverse order of array by swaping the elements.
+*/
 void reverseSwap(Array *a) {
     for(int i=0,j=a->length-1; i<j; i++,j--) {
         swap(&a->A[i], &a->A[j]);
     }
+}
+
+/*
+Shift array to the left and the element removed is replaced at the end of the array (rotate).
+*/
+void leftShift(Array *a) {
+    int temp=a->A[0];
+    for(int i=0;i<a->length-1;i++) {
+        a->A[i]=a->A[i+1];
+    }
+    a->A[a->length-1]=temp;
+}
+
+
+/*
+Shift array to the right and the element removed is replaced at the start of the array (rotate).
+*/
+void rightShift(Array *a) {
+    int temp=a->A[a->length-1];
+    for(int i=a->length-1;i>0;i--) {
+        a->A[i]=a->A[i-1];
+    }
+    a->A[0]=temp;
 }
 
 int main() {
@@ -47,5 +76,15 @@ int main() {
     display(arr);
 
     reverseSwap(&arr);
+    display(arr);
+
+    leftShift(&arr);
+    display(arr);
+
+    printf("\n\n");
+    rightShift(&arr);
+    display(arr);
+
+    rightShift(&arr);
     display(arr);
 }
