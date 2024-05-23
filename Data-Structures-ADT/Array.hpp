@@ -13,10 +13,17 @@ private:
     int length;
 
 public:
-    Array() {
-
+    Array(T *a, int l) {
+        arr=a;
+        length=l;
+        size=l+1;
+        arr=new T[size];
+    }
+    ~Array() {
+        delete[] arr;
     }
 
+    T length();
     void append(T value);
     void insert(T index, T value);
     T search(T key, string searchType);
@@ -35,11 +42,23 @@ public:
     Array intersection(Array arr2);
     Array difference(Array arr2);
 };
-/*
+
 template <typename T>
-void Array::append(T value) {
+T Array<T>::length(){
+    return length;
+};
 
-}*/
-
+template <typename T>
+ostream& operator<<(ostream& out, Array<T> a) {
+    out<<"[";
+    for(int i=0; i<a.length(); i++) {
+        if(a.arr[i]==a.arr[a.length()-1]) {
+            out<<a.arr[i]<<"]";
+        } else {
+            out<<a.arr[i]<<",";
+        }
+    }
+    return out;
+}
 
 #endif
