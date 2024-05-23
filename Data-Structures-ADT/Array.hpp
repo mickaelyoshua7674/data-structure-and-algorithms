@@ -35,11 +35,11 @@ public:
     Array intersection(Array arr2);
     Array difference(Array arr2);
 };
-
+/*
 template <typename T>
 void Array::append(T value) {
 
-}
+}*/
 
 
 #endif
