@@ -10,10 +10,10 @@ int main() {
         printf("%d ", p[i]);
     }
     printf("\n");
-    delete[] p; // delete de address on previous array
+    delete[] p; // delete the address on previous array
     p=q; // point to new array
     q=NULL; // dereference the new pointer so there is only one pointer to new array
-    for(int i=0;i<size_p;i++) { // copy all elements from previous array to new array
+    for(int i=0;i<size_p;i++) {
         printf("%d ", p[i]);
     }
 }
