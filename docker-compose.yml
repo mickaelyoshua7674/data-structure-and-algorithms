@@ -1,0 +1,11 @@
+# Environment to execute c and c++ codes
+version: "3.7"
+
+services:
+  
+  gcc-environment:
+    container_name: "gcc-environment"
+    image: gcc:latest
+    command: tail -F anything
+    volumes:
+      - ./Content:/usr/src/myapp
